@@ -1,0 +1,10 @@
+<%= link_to "<< Go to Home Page", books_path %>
+<h3>Edit a Book</h3>
+<%= form_for @book do |f| %>
+  <p>Enter Book's New Title: <%= f.text_field :title %></p>
+  <p>Enter Book's New Author: <%= f.text_field :author %></p>
+  <p>Select Book's New Genre: <%= f.select :genre, ['Action/Adventure', 'Classic', 'Fantasy', 'Graphic Novel', 'Horror', 'Mystery', 'Romance', 'Sci-Fi'] %></p></p>
+  <p>Enter Book's New Price: <%= f.text_field :price %></p>
+  <p>Enter Book's New Publication Date: <%= f.date_select :date, :order => [:month, :day, :year], :start_year => Time.now.year, :end_year => 1900 %></p>
+  <%= f.submit %>
+<% end %>

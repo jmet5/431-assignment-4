@@ -1,0 +1,11 @@
+<%= link_to "<< Go to Home Page", books_path %>
+<h3>Add a New Book</h3>
+<%= form_for @book do |f| %>
+  <p>Enter Book's Title: <%= f.text_field :title, placeholder: "Book Title" %></p>
+  <p>Enter Book's Author: <%= f.text_field :author, placeholder: "Book Author" %></p>
+  <p>Select Book's Genre: <%= f.select :genre, ['Action/Adventure', 'Classic', 'Fantasy', 'Graphic Novel', 'Horror', 'Mystery', 'Romance', 'Sci-Fi'] %></p>
+  <p>Enter Book's Price: <%= f.text_field :price, placeholder: "Book Price" %></p>
+  <p>Enter Book's Date: <%= f.date_select :date, :order => [:month, :day, :year], :start_year => Time.now.year, :end_year => 1900 %></p>
+
+  <%= f.submit %>
+<% end %>

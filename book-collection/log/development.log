@@ -1,0 +1,1645 @@
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE DATABASE "book_collection_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE DATABASE "book_collection_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1184465940878025330)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateBooks (20200919000205)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE TABLE "books" ("id" bigserial primary key, "title" character varying, "author" character varying, "genre" character varying, "price" float, "date" date, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(1184465940878025330)[0m
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/" for ::1 at 2020-09-18 19:06:58 -0500
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (6.0.3.3) lib/active_record/migration.rb:586:in `check_pending!'
+activerecord (6.0.3.3) lib/active_record/migration.rb:564:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/rails/actions" for ::1 at 2020-09-18 19:07:12 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1184465940878025330)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateBooks (20200919000205)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "books" ("id" bigserial primary key, "title" character varying, "author" character varying, "genre" character varying, "price" float, "date" date, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(1184465940878025330)[0m
+  
+StandardError (An error has occurred, this and all later migrations canceled:
+
+PG::DuplicateTable: ERROR:  relation "books" already exists
+):
+  
+activerecord (6.0.3.3) lib/active_record/connection_adapters/postgresql/database_statements.rb:92:in `exec'
+activerecord (6.0.3.3) lib/active_record/connection_adapters/postgresql/database_statements.rb:92:in `block (2 levels) in execute'
+activesupport (6.0.3.3) lib/active_support/dependencies/interlock.rb:48:in `block in permit_concurrent_loads'
+activesupport (6.0.3.3) lib/active_support/concurrency/share_lock.rb:187:in `yield_shares'
+activesupport (6.0.3.3) lib/active_support/dependencies/interlock.rb:47:in `permit_concurrent_loads'
+activerecord (6.0.3.3) lib/active_record/connection_adapters/postgresql/database_statements.rb:91:in `block in execute'
+activerecord (6.0.3.3) lib/active_record/connection_adapters/abstract_adapter.rb:722:in `block (2 levels) in log'
+activesupport (6.0.3.3) lib/active_support/concurrency/load_interlock_aware_monitor.rb:26:in `block (2 levels) in synchronize'
+activesupport (6.0.3.3) lib/active_support/concurrency/load_interlock_aware_monitor.rb:25:in `handle_interrupt'
+activesupport (6.0.3.3) lib/active_support/concurrency/load_interlock_aware_monitor.rb:25:in `block in synchronize'
+activesupport (6.0.3.3) lib/active_support/concurrency/load_interlock_aware_monitor.rb:21:in `handle_interrupt'
+activesupport (6.0.3.3) lib/active_support/concurrency/load_interlock_aware_monitor.rb:21:in `synchronize'
+activerecord (6.0.3.3) lib/active_record/connection_adapters/abstract_adapter.rb:721:in `block in log'
+activesupport (6.0.3.3) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activerecord (6.0.3.3) lib/active_record/connection_adapters/abstract_adapter.rb:712:in `log'
+activerecord (6.0.3.3) lib/active_record/connection_adapters/postgresql/database_statements.rb:90:in `execute'
+activerecord (6.0.3.3) lib/active_record/connection_adapters/abstract/schema_statements.rb:315:in `create_table'
+activerecord (6.0.3.3) lib/active_record/migration.rb:890:in `block in method_missing'
+activerecord (6.0.3.3) lib/active_record/migration.rb:858:in `block in say_with_time'
+/usr/lib/ruby/2.5.0/benchmark.rb:293:in `measure'
+activerecord (6.0.3.3) lib/active_record/migration.rb:858:in `say_with_time'
+activerecord (6.0.3.3) lib/active_record/migration.rb:879:in `method_missing'
+db/migrate/20200919000205_create_books.rb:3:in `change'
+activerecord (6.0.3.3) lib/active_record/migration.rb:828:in `exec_migration'
+activerecord (6.0.3.3) lib/active_record/migration.rb:812:in `block (2 levels) in migrate'
+/usr/lib/ruby/2.5.0/benchmark.rb:293:in `measure'
+activerecord (6.0.3.3) lib/active_record/migration.rb:811:in `block in migrate'
+activerecord (6.0.3.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:471:in `with_connection'
+activerecord (6.0.3.3) lib/active_record/migration.rb:810:in `migrate'
+activerecord (6.0.3.3) lib/active_record/migration.rb:1002:in `migrate'
+activerecord (6.0.3.3) lib/active_record/migration.rb:1310:in `block in execute_migration_in_transaction'
+activerecord (6.0.3.3) lib/active_record/migration.rb:1361:in `block in ddl_transaction'
+activerecord (6.0.3.3) lib/active_record/connection_adapters/abstract/database_statements.rb:280:in `block in transaction'
+activerecord (6.0.3.3) lib/active_record/connection_adapters/abstract/transaction.rb:280:in `block in within_new_transaction'
+activesupport (6.0.3.3) lib/active_support/concurrency/load_interlock_aware_monitor.rb:26:in `block (2 levels) in synchronize'
+activesupport (6.0.3.3) lib/active_support/concurrency/load_interlock_aware_monitor.rb:25:in `handle_interrupt'
+activesupport (6.0.3.3) lib/active_support/concurrency/load_interlock_aware_monitor.rb:25:in `block in synchronize'
+activesupport (6.0.3.3) lib/active_support/concurrency/load_interlock_aware_monitor.rb:21:in `handle_interrupt'
+activesupport (6.0.3.3) lib/active_support/concurrency/load_interlock_aware_monitor.rb:21:in `synchronize'
+activerecord (6.0.3.3) lib/active_record/connection_adapters/abstract/transaction.rb:278:in `within_new_transaction'
+activerecord (6.0.3.3) lib/active_record/connection_adapters/abstract/database_statements.rb:280:in `transaction'
+activerecord (6.0.3.3) lib/active_record/transactions.rb:212:in `transaction'
+activerecord (6.0.3.3) lib/active_record/migration.rb:1361:in `ddl_transaction'
+activerecord (6.0.3.3) lib/active_record/migration.rb:1309:in `execute_migration_in_transaction'
+activerecord (6.0.3.3) lib/active_record/migration.rb:1281:in `block in migrate_without_lock'
+activerecord (6.0.3.3) lib/active_record/migration.rb:1280:in `each'
+activerecord (6.0.3.3) lib/active_record/migration.rb:1280:in `migrate_without_lock'
+activerecord (6.0.3.3) lib/active_record/migration.rb:1229:in `block in migrate'
+activerecord (6.0.3.3) lib/active_record/migration.rb:1382:in `with_advisory_lock'
+activerecord (6.0.3.3) lib/active_record/migration.rb:1229:in `migrate'
+activerecord (6.0.3.3) lib/active_record/migration.rb:1061:in `up'
+activerecord (6.0.3.3) lib/active_record/migration.rb:1036:in `migrate'
+activerecord (6.0.3.3) lib/active_record/tasks/database_tasks.rb:238:in `migrate'
+activerecord (6.0.3.3) lib/active_record/migration.rb:135:in `block in <class:PendingMigrationError>'
+activesupport (6.0.3.3) lib/active_support/actionable_error.rb:28:in `dispatch'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/actionable_exceptions.rb:19:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (1702.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "book_collection_development"[0m
+  [1m[35m (459.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "book_collection_test"[0m
+  [1m[35m (7595.4ms)[0m  [1m[35mCREATE DATABASE "book_collection_development" ENCODING = 'unicode'[0m
+  [1m[35m (9125.7ms)[0m  [1m[35mCREATE DATABASE "book_collection_test" ENCODING = 'unicode'[0m
+  [1m[35m (922.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (93.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1184465940878025330)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateBooks (20200919000205)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (98.6ms)[0m  [1m[35mCREATE TABLE "books" ("id" bigserial primary key, "title" character varying, "author" character varying, "genre" character varying, "price" float, "date" date, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (2.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200919000205"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-09-19 00:09:08.974817"], ["updated_at", "2020-09-19 00:09:08.974817"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(1184465940878025330)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (1.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "price", "date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "The Lightning Thief"], ["author", "Rick Riordan"], ["genre", "Fantasy"], ["price", 5.99], ["date", "2005-06-28"], ["created_at", "2020-09-19 00:09:14.970111"], ["updated_at", "2020-09-19 00:09:14.970111"]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "price", "date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "The Great Gatsby"], ["author", "F. Scott Fitzgerald"], ["genre", "Classic"], ["price", 5.99], ["date", "1925-04-10"], ["created_at", "2020-09-19 00:09:14.976041"], ["updated_at", "2020-09-19 00:09:14.976041"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "price", "date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Artemis Fowl"], ["author", "Eoin Colfer"], ["genre", "Fantasy"], ["price", 6.99], ["date", "2001-04-26"], ["created_at", "2020-09-19 00:09:14.979911"], ["updated_at", "2020-09-19 00:09:14.979911"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books" LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/rails/actions" for ::1 at 2020-09-18 19:09:33 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1184465940878025330)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(1184465940878025330)[0m
+Started GET "/" for ::1 at 2020-09-18 19:09:33 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /var/lib/gems/2.5.0/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/2.5.0/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 8.1ms | Allocations: 461)
+Completed 200 OK in 18ms (Views: 12.1ms | ActiveRecord: 0.0ms | Allocations: 2598)
+
+
+Started GET "/books" for ::1 at 2020-09-18 19:09:38 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/books/index" for ::1 at 2020-09-18 19:09:56 -0500
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (2.0ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 153.1ms | Allocations: 73203)
+Completed 500 Internal Server Error in 158ms (ActiveRecord: 6.5ms | Allocations: 74723)
+
+
+  
+ActionView::Template::Error (undefined method `book_path' for #<#<Class:0x00007fdefc03a2e0>:0x00007fdefc038940>
+Did you mean?  books_new_path):
+     8:   <% @books.each do |book| %>
+     9:     <tr>
+    10:       <td><%= book.title %></td>
+    11:       <td><%= button_to 'Show Book Details', book_path(book), method: 'get'%></td>
+    12:       <td><%= button_to 'Update Book', edit_book_path(book), method: 'get'%></td>
+    13:       <td><%= button_to 'Delete Book', book_path(book), method: 'delete', data: { confirm: 'Are you sure you want to delete?' } %></td>
+    14:   <% end %>
+  
+app/views/books/index.html.erb:11
+app/views/books/index.html.erb:8
+Started GET "/books" for ::1 at 2020-09-18 19:12:10 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/books/index" for ::1 at 2020-09-18 19:12:15 -0500
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.7ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 151.3ms | Allocations: 67214)
+Completed 500 Internal Server Error in 156ms (ActiveRecord: 1.7ms | Allocations: 68357)
+
+
+  
+ActionView::Template::Error (undefined method `book_path' for #<#<Class:0x00007fdefcb61e48>:0x00007fdefcb60520>
+Did you mean?  books_new_path):
+    10:       <td><%= book.title %></td>
+    11:       <td><%= button_to 'Show Book Details', books_show_path(book), method: 'get'%></td>
+    12:       <td><%= button_to 'Update Book', books_edit_path(book), method: 'get'%></td>
+    13:       <td><%= button_to 'Delete Book', book_path(book), method: 'delete', data: { confirm: 'Are you sure you want to delete?' } %></td>
+    14:   <% end %>
+    15: </table>
+    16: <%= button_to 'Add a Book', new_book_path, method: 'get'%>
+  
+app/views/books/index.html.erb:13
+app/views/books/index.html.erb:8
+Started GET "/books/index" for ::1 at 2020-09-18 19:12:27 -0500
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 250.3ms | Allocations: 131472)
+Completed 500 Internal Server Error in 255ms (ActiveRecord: 0.4ms | Allocations: 132617)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_book_path' for #<#<Class:0x00007fdf08446e18>:0x00007fdf084454f0>
+Did you mean?  books_new_path):
+    13:       <td><%= button_to 'Delete Book', books_new_path(book), method: 'delete', data: { confirm: 'Are you sure you want to delete?' } %></td>
+    14:   <% end %>
+    15: </table>
+    16: <%= button_to 'Add a Book', new_book_path, method: 'get'%>
+  
+app/views/books/index.html.erb:16
+Started GET "/books/index" for ::1 at 2020-09-18 19:12:47 -0500
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 5.9ms | Allocations: 2068)
+Completed 500 Internal Server Error in 681ms (ActiveRecord: 0.4ms | Allocations: 85752)
+
+
+  
+ActionView::Template::Error (undefined method `javascript_pack_tag' for #<#<Class:0x00007fdf04d5cf10>:0x00007fdf04d4eb18>
+Did you mean?  javascript_path
+               javascript_tag):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/books/index" for ::1 at 2020-09-18 19:13:42 -0500
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.1ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 6.1ms | Allocations: 2059)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 1.1ms | Allocations: 6518)
+
+
+  
+ActionView::Template::Error (The asset "application.js" is not present in the asset pipeline.
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_path 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/books/index" for ::1 at 2020-09-18 19:14:17 -0500
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 2059)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.4ms | Allocations: 7261)
+
+
+  
+ActionView::Template::Error (The asset "application.js" is not present in the asset pipeline.
+):
+    3: <head>
+    4:   <title>BookCollection</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+  
+app/views/layouts/application.html.erb:6
+Started GET "/books/index" for ::1 at 2020-09-18 19:14:49 -0500
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 2059)
+Completed 500 Internal Server Error in 174ms (ActiveRecord: 0.4ms | Allocations: 71043)
+
+
+  
+ActionView::Template::Error (undefined method `javascript_pack_tag' for #<#<Class:0x00007fdefc3d9770>:0x00007fdefc3bfdc0>
+Did you mean?  javascript_path
+               javascript_tag):
+    3: <head>
+    4:   <title>BookCollection</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_pack_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+  
+app/views/layouts/application.html.erb:6
+Started GET "/books/index" for ::1 at 2020-09-18 19:15:12 -0500
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 2059)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.3ms | Allocations: 4929)
+
+
+Started GET "/books/show.3" for ::1 at 2020-09-18 19:15:23 -0500
+Processing by BooksController#show as 
+Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms | Allocations: 646)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Book without an ID):
+  
+app/controllers/books_controller.rb:44:in `current_book'
+Started GET "/books/edit.1" for ::1 at 2020-09-18 19:15:45 -0500
+Processing by BooksController#edit as 
+Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms | Allocations: 635)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Book without an ID):
+  
+app/controllers/books_controller.rb:44:in `current_book'
+Started DELETE "/books/new.3" for ::1 at 2020-09-18 19:15:58 -0500
+  
+ActionController::RoutingError (No route matches [DELETE] "/books/new.3"):
+  
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/books/new" for ::1 at 2020-09-18 19:16:16 -0500
+Processing by BooksController#new as HTML
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 195.3ms | Allocations: 129130)
+Completed 500 Internal Server Error in 198ms (ActiveRecord: 0.0ms | Allocations: 129764)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `books_path' for #<#<Class:0x00007fdefc63dcc8>:0x00007fdf084ca010>
+Did you mean?  books_new_path):
+    1: <%= link_to "<< Go to Home Page", books_path %>
+    2: <h3>Add a New Book</h3>
+    3: <%= form_for @book do |f| %>
+    4:   <p>Enter Book's Title: <%= f.text_field :title, placeholder: "Book Title" %></p>
+  
+app/views/books/new.html.erb:1
+Started GET "/books/index" for ::1 at 2020-09-18 19:17:11 -0500
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 2046)
+Completed 200 OK in 13ms (Views: 11.3ms | ActiveRecord: 0.4ms | Allocations: 4999)
+
+
+Started GET "/books/new" for ::1 at 2020-09-18 19:17:13 -0500
+Processing by BooksController#new as HTML
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 103.1ms | Allocations: 66265)
+Completed 500 Internal Server Error in 109ms (ActiveRecord: 0.0ms | Allocations: 66890)
+
+
+  
+ActionView::Template::Error (undefined method `books_path' for #<#<Class:0x00007ffff8668028>:0x00007fdefdbc0a28>
+Did you mean?  books_new_path):
+    1: <%= link_to "<< Go to Home Page", books_index_path %>
+    2: <h3>Add a New Book</h3>
+    3: <%= form_for @book do |f| %>
+    4:   <p>Enter Book's Title: <%= f.text_field :title, placeholder: "Book Title" %></p>
+    5:   <p>Enter Book's Author: <%= f.text_field :author, placeholder: "Book Author" %></p>
+    6:   <p>Select Book's Genre: <%= f.select :genre, ['Action/Adventure', 'Classic', 'Fantasy', 'Graphic Novel', 'Horror', 'Mystery', 'Romance', 'Sci-Fi'] %></p>
+  
+app/views/books/new.html.erb:3
+Started GET "/books/index" for ::1 at 2020-09-18 19:19:17 -0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 18.0ms | Allocations: 8713)
+Completed 200 OK in 45ms (Views: 32.6ms | ActiveRecord: 5.6ms | Allocations: 15649)
+
+
+Started GET "/books/new" for ::1 at 2020-09-18 19:19:19 -0500
+Processing by BooksController#new as HTML
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 225.8ms | Allocations: 129774)
+Completed 500 Internal Server Error in 229ms (ActiveRecord: 0.0ms | Allocations: 130420)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `books_path' for #<#<Class:0x00007fb1f10bccf0>:0x00007fffe2674398>
+Did you mean?  books_new_path):
+    1: <%= link_to "<< Go to Home Page", books_path %>
+    2: <h3>Add a New Book</h3>
+    3: <%= form_for @book do |f| %>
+    4:   <p>Enter Book's Title: <%= f.text_field :title, placeholder: "Book Title" %></p>
+  
+app/views/books/new.html.erb:1
+Started GET "/books/new" for ::1 at 2020-09-18 19:19:31 -0500
+Processing by BooksController#new as HTML
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 127.8ms | Allocations: 66279)
+Completed 500 Internal Server Error in 132ms (ActiveRecord: 0.0ms | Allocations: 67542)
+
+
+  
+ActionView::Template::Error (undefined method `books_path' for #<#<Class:0x00007fb1f4ec3df0>:0x00007fb1f4ec23d8>
+Did you mean?  books_new_path):
+    1: <%= link_to "<< Go to Home Page", books_new_path %>
+    2: <h3>Add a New Book</h3>
+    3: <%= form_for @book do |f| %>
+    4:   <p>Enter Book's Title: <%= f.text_field :title, placeholder: "Book Title" %></p>
+    5:   <p>Enter Book's Author: <%= f.text_field :author, placeholder: "Book Author" %></p>
+    6:   <p>Select Book's Genre: <%= f.select :genre, ['Action/Adventure', 'Classic', 'Fantasy', 'Graphic Novel', 'Horror', 'Mystery', 'Romance', 'Sci-Fi'] %></p>
+  
+app/views/books/new.html.erb:3
+Started GET "/books/index" for ::1 at 2020-09-18 19:20:13 -0500
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 2056)
+Completed 200 OK in 15ms (Views: 13.0ms | ActiveRecord: 0.5ms | Allocations: 5036)
+
+
+Started GET "/books/new" for ::1 at 2020-09-18 19:20:15 -0500
+Processing by BooksController#new as HTML
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 205.5ms | Allocations: 129110)
+Completed 500 Internal Server Error in 209ms (ActiveRecord: 0.0ms | Allocations: 129739)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `books_path' for #<#<Class:0x00007fb1f58d0640>:0x00007fb1f457eb50>
+Did you mean?  books_new_path):
+    1: <%= link_to "<< Go to Home Page", books_path %>
+    2: <h3>Add a New Book</h3>
+    3: <%= form_for @book do |f| %>
+    4:   <p>Enter Book's Title: <%= f.text_field :title, placeholder: "Book Title" %></p>
+  
+app/views/books/new.html.erb:1
+Started GET "/" for ::1 at 2020-09-18 19:23:21 -0500
+  
+NameError (undefined local variable or method `index' for #<ActionDispatch::Routing::Mapper:0x00007fffe0eac008>):
+  
+config/routes.rb:3:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+Started GET "/" for ::1 at 2020-09-18 19:23:45 -0500
+  
+ActionController::RoutingError (uninitialized constant BookController
+Did you mean?  BooksController):
+  
+actionpack (6.0.3.3) lib/action_dispatch/http/request.rb:92:in `rescue in controller_class_for'
+actionpack (6.0.3.3) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.3.3) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.3.3) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (6.0.3.3) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.3.3) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.3) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-09-18 19:23:56 -0500
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 165.6ms | Allocations: 72743)
+Completed 500 Internal Server Error in 171ms (ActiveRecord: 3.8ms | Allocations: 73932)
+
+
+  
+ActionView::Template::Error (undefined method `books_show_path' for #<#<Class:0x00007fb1d401d988>:0x00007fb1d401c088>
+Did you mean?  books_path):
+     8:   <% @books.each do |book| %>
+     9:     <tr>
+    10:       <td><%= book.title %></td>
+    11:       <td><%= button_to 'Show Book Details', books_show_path(book), method: 'get'%></td>
+    12:       <td><%= button_to 'Update Book', books_edit_path(book), method: 'get'%></td>
+    13:       <td><%= button_to 'Delete Book', books_new_path(book), method: 'delete', data: { confirm: 'Are you sure you want to delete?' } %></td>
+    14:   <% end %>
+  
+app/views/books/index.html.erb:11
+app/views/books/index.html.erb:8
+Started GET "/" for ::1 at 2020-09-18 19:24:38 -0500
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 6.6ms | Allocations: 1842)
+Completed 200 OK in 15ms (Views: 13.5ms | ActiveRecord: 0.5ms | Allocations: 4799)
+
+
+Started GET "/books/new" for ::1 at 2020-09-18 19:24:39 -0500
+Processing by BooksController#new as HTML
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 904.7ms | Allocations: 13045)
+Completed 200 OK in 912ms (Views: 910.3ms | ActiveRecord: 0.0ms | Allocations: 15228)
+
+
+Started GET "/books" for ::1 at 2020-09-18 19:24:42 -0500
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1559)
+Completed 200 OK in 13ms (Views: 11.3ms | ActiveRecord: 0.6ms | Allocations: 3602)
+
+
+Started GET "/books/1" for ::1 at 2020-09-18 19:24:43 -0500
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:44:in `current_book'
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 309)
+Completed 200 OK in 16ms (Views: 8.0ms | ActiveRecord: 0.7ms | Allocations: 3849)
+
+
+Started GET "/books" for ::1 at 2020-09-18 19:24:44 -0500
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1559)
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.3ms | Allocations: 3604)
+
+
+Started GET "/books/1/edit" for ::1 at 2020-09-18 19:24:45 -0500
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:44:in `current_book'
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 3.2ms | Allocations: 3562)
+Completed 200 OK in 13ms (Views: 8.4ms | ActiveRecord: 0.8ms | Allocations: 6333)
+
+
+Started GET "/books" for ::1 at 2020-09-18 19:24:46 -0500
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1565)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.4ms | Allocations: 3607)
+
+
+Started DELETE "/books/1" for ::1 at 2020-09-18 19:24:47 -0500
+Processing by BooksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"puUhbLMjD3YZ9NWQDOL518qec5M71DMYdgBfjEbsP8v8HTUMhqHNC0BYZTNHCHSWmJU14ZL1NYOu+u71CsloBA==", "id"=>"1"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:44:in `current_book'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:32:in `destroy'
+  [1m[36mBook Destroy (0.4ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/books_controller.rb:32:in `destroy'
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:32:in `destroy'
+Redirected to http://localhost:3000/books
+Completed 302 Found in 11ms (ActiveRecord: 2.1ms | Allocations: 2942)
+
+
+Started GET "/books" for ::1 at 2020-09-18 19:24:47 -0500
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1287)
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 0.4ms | Allocations: 3343)
+
+
+Started GET "/books/3" for ::1 at 2020-09-18 19:25:19 -0500
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:44:in `current_book'
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 75)
+Completed 200 OK in 10ms (Views: 7.0ms | ActiveRecord: 0.4ms | Allocations: 2710)
+
+
+Started GET "/books" for ::1 at 2020-09-18 19:25:21 -0500
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1280)
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.6ms | Allocations: 3317)
+
+
+Started DELETE "/books/3" for ::1 at 2020-09-18 19:25:22 -0500
+Processing by BooksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"4++UIQUSJHU8hfldSDkOM9t/1LmGFGUrt89KX1Fmz0uVnDkQJTARK7n1SHI70cdINyEjYByXxc48b8AUH/ouVw==", "id"=>"3"}
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:44:in `current_book'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:32:in `destroy'
+  [1m[36mBook Destroy (0.4ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = $1[0m  [["id", 3]]
+  ↳ app/controllers/books_controller.rb:32:in `destroy'
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:32:in `destroy'
+Redirected to http://localhost:3000/books
+Completed 302 Found in 11ms (ActiveRecord: 1.8ms | Allocations: 2877)
+
+
+Started GET "/books" for ::1 at 2020-09-18 19:25:22 -0500
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1011)
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.4ms | Allocations: 3058)
+
+
+Started GET "/books" for ::1 at 2020-09-18 19:25:23 -0500
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1004)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.4ms | Allocations: 3043)
+
+
+Started GET "/books" for ::1 at 2020-09-18 19:25:25 -0500
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1004)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.4ms | Allocations: 3041)
+
+
+Started DELETE "/books/2" for ::1 at 2020-09-18 19:25:31 -0500
+Processing by BooksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"f3JfFlnEBodI4AMRQ10eeDr5oy5hIseeQfHHyaqGBVfOrjq1/dttp5uA0f318WtigB7u18k+o+l7rwlUq9I4Hw==", "id"=>"2"}
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:44:in `current_book'
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:32:in `destroy'
+  [1m[36mBook Destroy (0.5ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = $1[0m  [["id", 2]]
+  ↳ app/controllers/books_controller.rb:32:in `destroy'
+  [1m[35m (726.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:32:in `destroy'
+Redirected to http://localhost:3000/books
+Completed 302 Found in 743ms (ActiveRecord: 728.0ms | Allocations: 2879)
+
+
+Started GET "/books" for ::1 at 2020-09-18 19:25:31 -0500
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 735)
+Completed 200 OK in 14ms (Views: 12.1ms | ActiveRecord: 0.6ms | Allocations: 2784)
+
+
+Started GET "/books" for ::1 at 2020-09-18 19:25:33 -0500
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 728)
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.4ms | Allocations: 2767)
+
+
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.7ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "price", "date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "The Lightning Thief"], ["author", "Rick Riordan"], ["genre", "Fantasy"], ["price", 5.99], ["date", "2005-06-28"], ["created_at", "2020-09-19 00:25:58.659050"], ["updated_at", "2020-09-19 00:25:58.659050"]]
+  [1m[35m (478.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "price", "date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "The Great Gatsby"], ["author", "F. Scott Fitzgerald"], ["genre", "Classic"], ["price", 5.99], ["date", "1925-04-10"], ["created_at", "2020-09-19 00:25:59.143330"], ["updated_at", "2020-09-19 00:25:59.143330"]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.4ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "price", "date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Artemis Fowl"], ["author", "Eoin Colfer"], ["genre", "Fantasy"], ["price", 6.99], ["date", "2001-04-26"], ["created_at", "2020-09-19 00:25:59.150286"], ["updated_at", "2020-09-19 00:25:59.150286"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/books" for ::1 at 2020-09-18 19:26:11 -0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.9ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 18.6ms | Allocations: 8495)
+Completed 200 OK in 48ms (Views: 34.3ms | ActiveRecord: 5.8ms | Allocations: 15430)
+
+
+Started GET "/books" for ::1 at 2020-09-18 19:26:13 -0500
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1571)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.3ms | Allocations: 3623)
+
+
+Started GET "/books/5" for ::1 at 2020-09-18 19:26:14 -0500
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:44:in `current_book'
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 316)
+Completed 200 OK in 13ms (Views: 7.7ms | ActiveRecord: 0.5ms | Allocations: 3850)
+
+
+Started GET "/books" for ::1 at 2020-09-18 19:26:16 -0500
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 1568)
+Completed 200 OK in 12ms (Views: 9.9ms | ActiveRecord: 0.6ms | Allocations: 3614)
+
+
+Started GET "/books" for ::1 at 2020-09-18 19:31:03 -0500
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 271.9ms | Allocations: 136952)
+Completed 500 Internal Server Error in 276ms (ActiveRecord: 0.4ms | Allocations: 138178)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `delete' for #<#<Class:0x00007ffffb79bb40>:0x00007ffffb798a80>):
+    10:       <td><%= book.title %></td>
+    11:       <td><%= button_to 'Show Book Details', book_path(book), method: 'get'%></td>
+    12:       <td><%= button_to 'Update Book', edit_book_path(book), method: 'get'%></td>
+    13:       <td><%= button_to 'Delete Book', book_path(book), method: delete, data: { confirm: 'Are you sure you want to delete?' } %></td>
+    14:   <% end %>
+    15: </table>
+    16: <%= button_to 'Add a Book', new_book_path, method: 'get'%>
+  
+app/views/books/index.html.erb:13
+app/views/books/index.html.erb:8
+Started GET "/books" for ::1 at 2020-09-18 19:31:38 -0500
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 5.6ms | Allocations: 1853)
+Completed 200 OK in 16ms (Views: 14.5ms | ActiveRecord: 0.3ms | Allocations: 4869)
+
+
+Started GET "/" for ::1 at 2020-09-18 19:31:40 -0500
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1562)
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.5ms | Allocations: 3603)
+
+
+Started GET "/books/new" for ::1 at 2020-09-18 19:31:44 -0500
+Processing by BooksController#new as HTML
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 15.6ms | Allocations: 11269)
+Completed 200 OK in 22ms (Views: 20.3ms | ActiveRecord: 0.0ms | Allocations: 13464)
+
+
+Started POST "/books" for ::1 at 2020-09-18 19:31:50 -0500
+Processing by BooksController#create as HTML
+  Parameters: {"authenticity_token"=>"T67CwXa7NkvJGJnJYR4EgfDHmZwMxwfc8Vk5uP8nrLufzqI7nEwLkf3b78Kz9L28bW92sq5ahuTT5rvlTnJpTQ==", "book"=>{"title"=>"Naruto", "author"=>"Rick Martin", "genre"=>"Graphic Novel", "price"=>"15", "date(2i)"=>"9", "date(3i)"=>"19", "date(1i)"=>"2020"}, "commit"=>"Create Book"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:17:in `create'
+  [1m[36mBook Create (0.7ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "price", "date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Naruto"], ["author", "Rick Martin"], ["genre", "Graphic Novel"], ["price", 15.0], ["date", "2020-09-19"], ["created_at", "2020-09-19 00:31:50.825972"], ["updated_at", "2020-09-19 00:31:50.825972"]]
+  ↳ app/controllers/books_controller.rb:17:in `create'
+  [1m[35m (16.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:17:in `create'
+Redirected to http://localhost:3000/books
+Completed 302 Found in 29ms (ActiveRecord: 17.5ms | Allocations: 3276)
+
+
+Started GET "/books" for ::1 at 2020-09-18 19:31:50 -0500
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1843)
+Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.4ms | Allocations: 3892)
+
+
+Started DELETE "/books/7" for ::1 at 2020-09-18 19:31:52 -0500
+Processing by BooksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"nVHEhQKjKxWnES8N+LjPSNZqugesEjCo772wTkXc9pPUFS/GGWj30zkg77sd8XMnbolT7pyjsgSeFhI+GAB3kQ==", "id"=>"7"}
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:44:in `current_book'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:32:in `destroy'
+  [1m[36mBook Destroy (0.4ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = $1[0m  [["id", 7]]
+  ↳ app/controllers/books_controller.rb:32:in `destroy'
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:32:in `destroy'
+Redirected to http://localhost:3000/books
+Completed 302 Found in 13ms (ActiveRecord: 2.1ms | Allocations: 2897)
+
+
+Started GET "/books" for ::1 at 2020-09-18 19:31:52 -0500
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1563)
+Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.5ms | Allocations: 3612)
+
+
+Started GET "/books" for ::1 at 2020-09-18 19:31:58 -0500
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1556)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.5ms | Allocations: 3597)
+
+
+Started GET "/books" for ::1 at 2020-09-18 19:39:07 -0500
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.9ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1959)
+Completed 200 OK in 15ms (Views: 13.1ms | ActiveRecord: 0.9ms | Allocations: 4905)
+
+
+Started GET "/books/new" for ::1 at 2020-09-18 19:39:08 -0500
+Processing by BooksController#new as HTML
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 3511)
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.0ms | Allocations: 5699)
+
+
+Started POST "/books" for ::1 at 2020-09-18 19:39:09 -0500
+Processing by BooksController#create as HTML
+  Parameters: {"authenticity_token"=>"GOlh+g+EsaiDMcPaB1A9coy0Qf/kyrlmXAF1WNrF8hPIiQEA5XOMcrfytdHVuoRPERyu0UZXOF5+vvcFa5A35Q==", "book"=>{"title"=>"", "author"=>"", "genre"=>"Action/Adventure", "price"=>"", "date(2i)"=>"9", "date(3i)"=>"19", "date(1i)"=>"2020"}, "commit"=>"Create Book"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:17:in `create'
+  [1m[36mBook Create (0.8ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", ""], ["author", ""], ["genre", "Action/Adventure"], ["date", "2020-09-19"], ["created_at", "2020-09-19 00:39:09.273127"], ["updated_at", "2020-09-19 00:39:09.273127"]]
+  ↳ app/controllers/books_controller.rb:17:in `create'
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:17:in `create'
+Redirected to http://localhost:3000/books
+Completed 302 Found in 16ms (ActiveRecord: 2.2ms | Allocations: 3059)
+
+
+Started GET "/books" for ::1 at 2020-09-18 19:39:09 -0500
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1843)
+Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.4ms | Allocations: 3897)
+
+
+Started DELETE "/books/8" for ::1 at 2020-09-18 19:39:10 -0500
+Processing by BooksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"E6qHnGpVwwDDuJnQJAIHsLV0gGUKkztsqLlq0F8oDuiRIsLG7rAWOPK0CT748Rjf24YFeEcc000XLNaAgvXLlA==", "id"=>"8"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:44:in `current_book'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:32:in `destroy'
+  [1m[36mBook Destroy (0.4ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = $1[0m  [["id", 8]]
+  ↳ app/controllers/books_controller.rb:32:in `destroy'
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:32:in `destroy'
+Redirected to http://localhost:3000/books
+Completed 302 Found in 12ms (ActiveRecord: 2.0ms | Allocations: 2909)
+
+
+Started GET "/books" for ::1 at 2020-09-18 19:39:10 -0500
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1563)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.3ms | Allocations: 3609)
+
+
+Started GET "/books" for ::1 at 2020-09-18 19:39:11 -0500
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1556)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.4ms | Allocations: 3592)
+
+
+Started GET "/" for ::1 at 2020-09-18 19:44:08 -0500
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.6ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 25.9ms | Allocations: 8495)
+Completed 200 OK in 166ms (Views: 142.8ms | ActiveRecord: 12.4ms | Allocations: 27045)
+
+
+Started GET "/books/new" for ::1 at 2020-09-18 19:44:11 -0500
+Processing by BooksController#new as HTML
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 9.2ms | Allocations: 5430)
+Completed 200 OK in 16ms (Views: 14.6ms | ActiveRecord: 0.0ms | Allocations: 7926)
+
+
+Started POST "/books" for ::1 at 2020-09-18 19:44:12 -0500
+Processing by BooksController#create as HTML
+  Parameters: {"authenticity_token"=>"BkAlTLUQvrv5NMkxWcRvqFOxV0gBtHSoOlrsXBz6k9zWIEW2X+eDYc33vzqLLtaVzhm4ZqMp9ZAY5W4Bra9WKg==", "book"=>{"title"=>"", "author"=>"", "genre"=>"Action/Adventure", "price"=>"", "date(2i)"=>"9", "date(3i)"=>"19", "date(1i)"=>"2020"}, "commit"=>"Create Book"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:17:in `create'
+  [1m[36mBook Create (0.7ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", ""], ["author", ""], ["genre", "Action/Adventure"], ["date", "2020-09-19"], ["created_at", "2020-09-19 00:44:12.251458"], ["updated_at", "2020-09-19 00:44:12.251458"]]
+  ↳ app/controllers/books_controller.rb:17:in `create'
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:17:in `create'
+Redirected to http://localhost:3000/books
+Completed 302 Found in 14ms (ActiveRecord: 2.9ms | Allocations: 3282)
+
+
+Started GET "/books" for ::1 at 2020-09-18 19:44:12 -0500
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1845)
+Completed 200 OK in 11ms (Views: 8.2ms | ActiveRecord: 0.4ms | Allocations: 4192)
+
+
+Started DELETE "/books/9" for ::1 at 2020-09-18 19:44:13 -0500
+Processing by BooksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Bd8N8LuZs1VmrZZv7E3JCusq8IWtsqJeaFXdzVBWPLSotpr8tlZC9PM2ZZ4thHzZS1+LqOcM2+pVKfrb9T39Uw==", "id"=>"9"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:44:in `current_book'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:32:in `destroy'
+  [1m[36mBook Destroy (0.4ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = $1[0m  [["id", 9]]
+  ↳ app/controllers/books_controller.rb:32:in `destroy'
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:32:in `destroy'
+Redirected to http://localhost:3000/books
+Completed 302 Found in 18ms (ActiveRecord: 1.9ms | Allocations: 3644)
+
+
+Started GET "/books" for ::1 at 2020-09-18 19:44:13 -0500
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1564)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.6ms | Allocations: 3910)
+
+
+Started GET "/books" for ::1 at 2020-09-18 19:44:14 -0500
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1565)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.4ms | Allocations: 3912)
+
+
+Started GET "/books" for ::1 at 2020-09-18 19:46:28 -0500
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 6.6ms | Allocations: 1831)
+Completed 500 Internal Server Error in 329ms (ActiveRecord: 0.7ms | Allocations: 42842)
+
+
+  
+ActionView::Template::Error (application.js):
+    3: <head>
+    4:   <title>BookCollection</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+  
+app/views/layouts/application.html.erb:6
+Started GET "/" for ::1 at 2020-09-18 19:52:36 -0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 22.8ms | Allocations: 8495)
+Completed 500 Internal Server Error in 307ms (ActiveRecord: 9.6ms | Allocations: 101410)
+
+
+  
+ActionView::Template::Error (undefined method `javascript_pack_tag' for #<#<Class:0x00007fd3490d5c68>:0x00007fd3490d42f0>
+Did you mean?  javascript_path
+               javascript_tag):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/" for ::1 at 2020-09-18 19:52:54 -0500
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 5.9ms | Allocations: 1855)
+Completed 200 OK in 16ms (Views: 14.3ms | ActiveRecord: 0.3ms | Allocations: 4947)
+
+
+Started GET "/books/new" for ::1 at 2020-09-18 19:52:57 -0500
+Processing by BooksController#new as HTML
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 11.0ms | Allocations: 5439)
+Completed 200 OK in 18ms (Views: 16.5ms | ActiveRecord: 0.0ms | Allocations: 7695)
+
+
+Started POST "/books" for ::1 at 2020-09-18 19:52:58 -0500
+Processing by BooksController#create as HTML
+  Parameters: {"authenticity_token"=>"TAygswAx3PmYGs93ss57ZQWYewwJwZ4nAgdyEbMwjg2cbMBJ6sbhI6zZuXxgJMJYmDCUIqtcHx8guPBMAmVL+w==", "book"=>{"title"=>"", "author"=>"", "genre"=>"Action/Adventure", "price"=>"", "date(2i)"=>"9", "date(3i)"=>"19", "date(1i)"=>"2020"}, "commit"=>"Create Book"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:17:in `create'
+  [1m[36mBook Create (0.7ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", ""], ["author", ""], ["genre", "Action/Adventure"], ["date", "2020-09-19"], ["created_at", "2020-09-19 00:52:58.221770"], ["updated_at", "2020-09-19 00:52:58.221770"]]
+  ↳ app/controllers/books_controller.rb:17:in `create'
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:17:in `create'
+Redirected to http://localhost:3000/books
+Completed 302 Found in 14ms (ActiveRecord: 2.4ms | Allocations: 3283)
+
+
+Started GET "/books" for ::1 at 2020-09-18 19:52:58 -0500
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1845)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.4ms | Allocations: 3949)
+
+
+Started DELETE "/books/10" for ::1 at 2020-09-18 19:52:58 -0500
+Processing by BooksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"wYTSXMpI3xOKC9/1ijt0GuE7h+559NbiWuSDcml1nIpqoyr3rI9YktPo8zkS/KfksxxLwBK8ocyXDdYnhsPlcQ==", "id"=>"10"}
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:44:in `current_book'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:32:in `destroy'
+  [1m[36mBook Destroy (0.4ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = $1[0m  [["id", 10]]
+  ↳ app/controllers/books_controller.rb:32:in `destroy'
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:32:in `destroy'
+Redirected to http://localhost:3000/books
+Completed 302 Found in 17ms (ActiveRecord: 2.1ms | Allocations: 3641)
+
+
+Started GET "/books" for ::1 at 2020-09-18 19:52:59 -0500
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1564)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.4ms | Allocations: 3666)
+
+
+Started GET "/books" for ::1 at 2020-09-18 19:53:00 -0500
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1556)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.4ms | Allocations: 3643)
+
+
+Started GET "/books" for ::1 at 2020-09-18 19:53:02 -0500
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1556)
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.4ms | Allocations: 3642)
+
+
+Started GET "/books" for ::1 at 2020-09-18 19:53:02 -0500
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1564)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.4ms | Allocations: 3650)
+
+
+Started GET "/books" for ::1 at 2020-09-18 19:53:03 -0500
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1556)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.4ms | Allocations: 3641)
+
+
+Started GET "/books" for ::1 at 2020-09-18 19:53:03 -0500
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 8.0ms | Allocations: 1556)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.7ms | Allocations: 3641)
+
+
+Started GET "/books" for ::1 at 2020-09-18 19:53:04 -0500
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1556)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.4ms | Allocations: 3643)
+
+
+Started GET "/books" for ::1 at 2020-09-18 19:55:24 -0500
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1831)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.4ms | Allocations: 7440)
+
+
+  
+ActionView::Template::Error (The asset "application.js" is not present in the asset pipeline.
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/books" for ::1 at 2020-09-18 19:56:10 -0500
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 9.8ms | Allocations: 1830)
+Completed 500 Internal Server Error in 193ms (ActiveRecord: 0.4ms | Allocations: 77204)
+
+
+  
+ActionView::Template::Error (undefined method `javascript_pack_tag' for #<#<Class:0x00007fd34a8b1b98>:0x00007fd34a8b0298>
+Did you mean?  javascript_path
+               javascript_tag):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/books" for ::1 at 2020-09-18 19:56:26 -0500
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 7.1ms | Allocations: 1830)
+Completed 200 OK in 17ms (Views: 15.1ms | ActiveRecord: 0.5ms | Allocations: 4852)
+
+
+Started GET "/books/6" for ::1 at 2020-09-18 19:56:28 -0500
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:44:in `current_book'
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 308)
+Completed 200 OK in 11ms (Views: 7.2ms | ActiveRecord: 0.4ms | Allocations: 3132)
+
+
+Started GET "/books" for ::1 at 2020-09-18 19:56:29 -0500
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1559)
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.5ms | Allocations: 3642)
+
+
+Started GET "/" for ::1 at 2020-09-18 20:13:48 -0500
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (3.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 32.0ms | Allocations: 8510)
+Completed 500 Internal Server Error in 243ms (ActiveRecord: 15.1ms | Allocations: 88433)
+
+
+  
+ActionView::Template::Error (undefined method `javascript_pack_tag' for #<#<Class:0x00007f82fd049bb0>:0x00007f82fd048238>
+Did you mean?  javascript_path
+               javascript_tag):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/" for ::1 at 2020-09-18 20:34:13 -0500
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (2.6ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 31.0ms | Allocations: 8512)
+[Webpacker] Compiling...
+Started GET "/" for ::1 at 2020-09-18 20:34:16 -0500
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 7.0ms | Allocations: 1708)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /mnt/c/users/jmet9/Documents/CSCE 431/assignment-4/book-collection/public/packs
+[Webpacker] Hash: 15d1bb7b54cf6326b9ba
+Version: webpack 4.44.2
+Time: 3613ms
+Built at: 09/18/2020 8:34:19 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-9afcbb5693aa87623e69.js    124 KiB  application  [emitted] [immutable]  application
+js/application-9afcbb5693aa87623e69.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-9afcbb5693aa87623e69.js js/application-9afcbb5693aa87623e69.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+Completed 200 OK in 6767ms (Views: 6740.7ms | ActiveRecord: 11.4ms | Allocations: 26761)
+
+
+[Webpacker] Compiled all packs in /mnt/c/users/jmet9/Documents/CSCE 431/assignment-4/book-collection/public/packs
+[Webpacker] Hash: 15d1bb7b54cf6326b9ba
+Version: webpack 4.44.2
+Time: 1383ms
+Built at: 09/18/2020 8:34:21 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-9afcbb5693aa87623e69.js    124 KiB  application  [emitted] [immutable]  application
+js/application-9afcbb5693aa87623e69.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-9afcbb5693aa87623e69.js js/application-9afcbb5693aa87623e69.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+Completed 200 OK in 5350ms (Views: 5348.4ms | ActiveRecord: 1.2ms | Allocations: 9336)
+
+
+Started GET "/books/new" for ::1 at 2020-09-18 20:34:25 -0500
+Processing by BooksController#new as HTML
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 9.5ms | Allocations: 5434)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 34ms (Views: 31.6ms | ActiveRecord: 0.0ms | Allocations: 9569)
+
+
+Started POST "/books" for ::1 at 2020-09-18 20:34:26 -0500
+Processing by BooksController#create as HTML
+  Parameters: {"authenticity_token"=>"j9CsUKZPSP7egi+maCyoY86JMd8os4DwI+DkqBZV1V2CvCqpnyCBjy6iZ2hdRJ7ttAFCdRXe/G0GmVFGYZovow==", "book"=>{"title"=>"", "author"=>"", "genre"=>"Action/Adventure", "price"=>"", "date(2i)"=>"9", "date(3i)"=>"19", "date(1i)"=>"2020"}, "commit"=>"Create Book"}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:17:in `create'
+  [1m[36mBook Create (0.7ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", ""], ["author", ""], ["genre", "Action/Adventure"], ["date", "2020-09-19"], ["created_at", "2020-09-19 01:34:26.646263"], ["updated_at", "2020-09-19 01:34:26.646263"]]
+  ↳ app/controllers/books_controller.rb:17:in `create'
+  [1m[35m (702.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:17:in `create'
+Redirected to http://localhost:3000/books
+Completed 302 Found in 715ms (ActiveRecord: 703.4ms | Allocations: 3227)
+
+
+Started GET "/books" for ::1 at 2020-09-18 20:34:27 -0500
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1847)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 28ms (Views: 26.9ms | ActiveRecord: 0.5ms | Allocations: 5809)
+
+
+Started DELETE "/books/11" for ::1 at 2020-09-18 20:34:30 -0500
+Processing by BooksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"hmFw50RIchKuwE6XaF9LqghGkFoAlu5AI2n/M97e3e6LDfYefSe7Y17gBlldN30kcs7j8D37kt0GEErdqREnEA==", "id"=>"11"}
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:44:in `current_book'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:32:in `destroy'
+  [1m[36mBook Destroy (0.3ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = $1[0m  [["id", 11]]
+  ↳ app/controllers/books_controller.rb:32:in `destroy'
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:32:in `destroy'
+Redirected to http://localhost:3000/books
+Completed 302 Found in 11ms (ActiveRecord: 2.3ms | Allocations: 3605)
+
+
+Started GET "/books" for ::1 at 2020-09-18 20:34:30 -0500
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1565)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 20.6ms | ActiveRecord: 0.3ms | Allocations: 5522)
+
+
+Started GET "/books" for ::1 at 2020-09-18 20:34:36 -0500
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1558)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 0.3ms | Allocations: 5505)
+
+
+Started GET "/" for ::1 at 2020-09-18 22:00:45 -0500
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (3.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 27.7ms | Allocations: 8512)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 105ms (Views: 83.9ms | ActiveRecord: 9.7ms | Allocations: 17335)
+
+
+Started GET "/books/4" for ::1 at 2020-09-18 22:00:47 -0500
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mBook Load (1.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:44:in `current_book'
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 1.5ms | Allocations: 316)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 39ms (Views: 29.2ms | ActiveRecord: 1.4ms | Allocations: 5781)
+
+
+Started GET "/books" for ::1 at 2020-09-18 22:00:51 -0500
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.5ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 1570)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 36ms (Views: 33.3ms | ActiveRecord: 1.5ms | Allocations: 5590)
+
+
+Started GET "/books" for ::1 at 2020-09-18 22:00:55 -0500
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1567)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 18.4ms | ActiveRecord: 0.4ms | Allocations: 5521)
+
+
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (457.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "book_collection_development"[0m
+  [1m[35m (468.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "book_collection_test"[0m
+  [1m[35m (8090.7ms)[0m  [1m[35mCREATE DATABASE "book_collection_development" ENCODING = 'unicode'[0m
+  [1m[35m (10537.7ms)[0m  [1m[35mCREATE DATABASE "book_collection_test" ENCODING = 'unicode'[0m
+  [1m[35m (140.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (88.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1184465940878025330)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateBooks (20200919000205)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (136.9ms)[0m  [1m[35mCREATE TABLE "books" ("id" bigserial primary key, "title" character varying, "author" character varying, "genre" character varying, "price" float, "date" date, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (2.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200919000205"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-09-19 03:09:26.638505"], ["updated_at", "2020-09-19 03:09:26.638505"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(1184465940878025330)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (1.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "price", "date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "The Lightning Thief"], ["author", "Rick Riordan"], ["genre", "Fantasy"], ["price", 5.99], ["date", "2005-06-28"], ["created_at", "2020-09-19 03:09:37.996892"], ["updated_at", "2020-09-19 03:09:37.996892"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (1.5ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "price", "date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "The Great Gatsby"], ["author", "F. Scott Fitzgerald"], ["genre", "Classic"], ["price", 5.99], ["date", "1925-04-10"], ["created_at", "2020-09-19 03:09:38.002751"], ["updated_at", "2020-09-19 03:09:38.002751"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "price", "date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Artemis Fowl"], ["author", "Eoin Colfer"], ["genre", "Fantasy"], ["price", 6.99], ["date", "2001-04-26"], ["created_at", "2020-09-19 03:09:38.008837"], ["updated_at", "2020-09-19 03:09:38.008837"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for ::1 at 2020-09-18 22:10:00 -0500
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 21.6ms | Allocations: 8497)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 134ms (Views: 114.4ms | ActiveRecord: 8.5ms | Allocations: 17406)
+
+
+Started GET "/books/3" for ::1 at 2020-09-18 22:10:03 -0500
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:44:in `current_book'
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 1.5ms | Allocations: 316)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 37ms (Views: 27.3ms | ActiveRecord: 0.8ms | Allocations: 5789)
+
+
+Started GET "/books" for ::1 at 2020-09-18 22:10:04 -0500
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.0ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 1570)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 32ms (Views: 30.4ms | ActiveRecord: 1.0ms | Allocations: 5540)
+
+
+Started GET "/books/2" for ::1 at 2020-09-18 22:10:10 -0500
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:44:in `current_book'
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 76)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 21.0ms | ActiveRecord: 0.6ms | Allocations: 4635)
+
+
+Started GET "/books" for ::1 at 2020-09-18 22:10:11 -0500
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 1567)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 21.8ms | ActiveRecord: 0.5ms | Allocations: 5522)
+
+

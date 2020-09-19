@@ -1,0 +1,13 @@
+<% if !flash[:notice].blank? %>
+  <div class="notice">
+    <%= flash[:notice] %>
+  </div>
+<% end %>
+
+<%= link_to "<< Go to Home Page", books_path %>
+
+<h2>Title: <%= @book.title %></h2>
+<h2>Author: <%= @book.author %></h2>
+<h2>Genre: <%= @book.genre %></h2>
+<h2>Price: $<%= @book.price %></h2>
+<h2>Published Date: <%= @book.date.strftime("%B %d, %Y") %></h2>
